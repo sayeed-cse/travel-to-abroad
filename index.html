@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom css -->
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-5">
+            <!-- left content start -->
+            <div class="col-lg-6 text-uppercase">
+                <h2 class="bg_orange text-white text-center py-3 fs-3 ">Going to Australia</h2>
+                <div class="leftSideOption w-75 mx-auto">
+                    <ul class="list-group gap-3 mt-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-1 border-dark rounded-pill content-title "
+                            onclick="logButtonIndex(0)">
+                            <span class="ms-2 me-auto fw-bold">Show interest!!</span>
+                            <span class="">01</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-1 border-dark rounded-pill content-title"
+                            onclick="logButtonIndex(1)">
+                            <span class="ms-2 me-auto fw-bold">consultation</span>
+                            <span class="">02</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-1 border-dark rounded-pill content-title"
+                            onclick="logButtonIndex(2)">
+                            <span class="ms-2 me-auto fw-bold">visa application</span>
+                            <span class="">03</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-1 border-dark rounded-pill content-title"
+                            onclick="logButtonIndex(3)">
+                            <span class="ms-2 me-auto fw-bold">before you arrive</span>
+                            <span class="">04</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-1 border-dark rounded-pill content-title"
+                            onclick="logButtonIndex(4)">
+                            <span class="ms-2 me-auto fw-bold">welcome to australia</span>
+                            <span class="">05</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <!-- left content End -->
+            
+            <!-- Right content start -->
+
+            <div class="col-lg-6">
+                <h2 class="text-center py-3 mb-5 fs-3 bg-white">IN AUSTRALIA</h2>
+                <div class="mx-lg-4 pr-5">
+                    <div class="showContent">
+                        <h1 class="fs-5 mb-3">01. Show interest!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p> Inventore odit saepe labore atque dolorum ratione aspernatur officiis voluptatem facilis.</p>
+                        <p>ecessitatibus est sapiente magni ea reprehenderit doloremque maiores ullam fugit facere.</p>
+                    </div>
+    
+                    <div class="showContent">
+                        <h1 class="fs-5">02. Consultation</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p> Inventore odit saepe labore atque dolorum ratione aspernatur officiis voluptatem facilis.</p>
+                        <p>ecessitatibus est sapiente magni ea reprehenderit doloremque maiores ullam fugit facere.</p>
+                    </div>
+    
+                    <div class="showContent">
+                        <h1 class="fs-5">03. Visa Application</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p> Inventore odit saepe labore atque dolorum ratione aspernatur officiis voluptatem facilis.</p>
+                        <p>ecessitatibus est sapiente magni ea reprehenderit doloremque maiores ullam fugit facere.</p>
+                    </div>
+    
+                    <div class="showContent">
+                        <h1 class="fs-5">04. Before you arrive</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p> Inventore odit saepe labore atque dolorum ratione aspernatur officiis voluptatem facilis.</p>
+                        <p>ecessitatibus est sapiente magni ea reprehenderit doloremque maiores ullam fugit facere.</p>
+                    </div>
+    
+                    <div class="showContent">
+                        <h1 class="fs-5">Welcome to australia</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p> Inventore odit saepe labore atque dolorum ratione aspernatur officiis voluptatem facilis.</p>
+                        <p>ecessitatibus est sapiente magni ea reprehenderit doloremque maiores ullam fugit facere.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+            <!-- Right content End -->
+
+    </div>
+
+    <script>
+
+        function logButtonIndex(index_no) {
+            // code for changing content title style after firing click event
+            let listItem = event.target.closest(".content-title");
+
+            let listItems = document.querySelectorAll(".content-title");
+            listItems.forEach(function (item) {
+                item.classList.remove("list-item-clicked");
+            });
+
+            listItem.classList.add("list-item-clicked");
+
+
+            // selecting all ".showContent" class 
+            // counting the length to execute conditon of loop 
+            let showContent = document.querySelectorAll(".showContent");
+            let loopLength = showContent.length;
+            
+            // to active/show the undisplayed content via function parameter 
+            for (let i = 0; i < loopLength; i++) {
+                
+                if (i == index_no) {
+
+                    showContent[i].classList.add("active");
+                }
+                else {
+                    showContent[i].classList.remove("active");
+                }
+            }
+        }
+
+
+
+       
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body{
+  background-color: #FBF7EE;
+}
+.showContent {
+  margin-bottom: 2px;
+  
+  box-sizing: border-box;
+  display: none;
+}
+.col-lg-6{
+  padding-right: 0;
+  padding-left: 0;
+}
+.active {
+  display: block;
+}
+.bg_orange{
+  background-color: #FA7D45;
+}
+.text_orange{
+  color: #FA7D45;
+}
+.list-item-clicked {
+  background-color: black;
+  color: #FA7D45;
+}
